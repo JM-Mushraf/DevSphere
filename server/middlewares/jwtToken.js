@@ -11,7 +11,7 @@ export const sendToken = (user, statusCode, res) => {
     expires: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000), // 2 days
     httpOnly: true,
     secure: isProduction,
-    sameSite: isProduction?"lax":"none",
+    sameSite: isProduction?"lax":"lax",
   };
 
   console.log("Token created:", token); // Debug log
