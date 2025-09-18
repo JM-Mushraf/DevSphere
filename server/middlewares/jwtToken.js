@@ -11,7 +11,7 @@ export const sendToken = (user, statusCode, res) => {
       expires: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000), // 2 days
       httpOnly: true,
       secure: isProduction,         // required for SameSite=None
-      sameSite: isProduction ? "none" : "lax",  // 🔑 change here
+      sameSite: isProduction ? "None" : "lax",  // 🔑 change here
       path: "/",                    // ensure it’s global
     };
 
